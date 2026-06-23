@@ -2,57 +2,58 @@
 
 This project explores the application of deep learning for automatic lung segmentation from chest CT images. Two different approaches were implemented and compared: a U-Net model developed from scratch and a Transfer Learning model using a pre-trained VGG16 encoder.
 
-The project also includes a Streamlit application that allows users to upload CT images, select a segmentation model and visualize the generated prediction through an interactive interface.
+The trained models were deployed in an interactive Streamlit application designed to provide an intuitive workflow for medical image segmentation.
 
 Developed as the final project for the Digital Image Processing course at Pontificia Universidad Javeriana Cali.
 
 ---
 
-## Overview
+## Application
 
-Manual segmentation of chest CT images is a time-consuming process that requires significant expertise. This project investigates whether deep learning models can automate this task while maintaining accurate segmentation of lung structures.
+<p align="center">
+  <img src="images/application_overview.png" width="900">
+</p>
 
-Two different architectures were implemented and evaluated under the same training conditions. The first model consists of a U-Net architecture built from scratch, while the second uses Transfer Learning with a pre-trained VGG16 encoder. To demonstrate a practical application of both models, they were deployed in a Streamlit web application designed for an intuitive clinical workflow.
+The application allows users to:
+
+- Register patient information.
+- Upload a chest CT image.
+- Select one or both segmentation models.
+- Generate segmentation predictions.
+- Compare the outputs of both models.
 
 ---
 
-## Features
+## Overview
 
-- Automatic lung segmentation from chest CT images
-- U-Net implementation developed from scratch
-- Transfer Learning model using VGG16
-- Interactive Streamlit interface
-- Patient information registration
-- Segmentation visualization
-- Performance metrics visualization
-- Downloadable prediction results
+Manual segmentation of lung structures in chest CT scans is a time-consuming process that requires expert knowledge. This project investigates the use of deep learning techniques to automate this task by comparing two segmentation approaches under the same conditions.
+
+The first model consists of a U-Net architecture developed from scratch, while the second incorporates a pre-trained VGG16 encoder through Transfer Learning. Both models were integrated into a Streamlit application to demonstrate how deep learning models can be deployed in a practical and user-friendly interface.
 
 ---
 
 ## Deep Learning Models
 
-### U-Net
+### U-Net from Scratch
 
-A U-Net architecture was implemented from scratch and trained for binary lung segmentation using chest CT images.
+A U-Net architecture was implemented and trained specifically for binary lung segmentation.
 
 ### Transfer Learning
 
-A second architecture was developed using a pre-trained VGG16 encoder integrated into the U-Net framework. This approach allowed the model to leverage previously learned visual features and provided more stable training on a limited dataset.
+A second architecture was implemented using a pre-trained VGG16 encoder within the U-Net framework. This approach leverages previously learned image representations to improve segmentation performance on limited datasets.
 
 ---
 
-## Application
+## Application Workflow
 
-The Streamlit application allows users to:
+The segmentation process consists of the following steps:
 
-- Register patient information.
-- Upload a chest CT image.
-- Select one of the available segmentation models.
-- Generate segmentation predictions.
-- Compare model outputs.
-- Download the resulting segmentation.
-
-The application was designed as a proof of concept showing how deep learning models can be integrated into an intuitive interface for healthcare professionals.
+1. Register doctor and patient information.
+2. Upload a chest CT image.
+3. Select the segmentation model.
+4. Generate the prediction.
+5. Visualize the segmentation mask.
+6. Compare both models when desired.
 
 ---
 
@@ -71,9 +72,10 @@ The application was designed as a proof of concept showing how deep learning mod
 ## Repository Structure
 
 ```text
-lung-ct-segmentation/
+lung-ct-segmentation
 │
 ├── app.py
+├── chest_ct_app.py
 ├── model_handler.py
 ├── image_processor.py
 ├── history_handler.py
@@ -90,7 +92,7 @@ lung-ct-segmentation/
 Clone the repository
 
 ```bash
-git clone https://github.com/<username>/lung-ct-segmentation.git
+git clone https://github.com/yourusername/lung-ct-segmentation.git
 ```
 
 Install the required packages
@@ -109,7 +111,9 @@ streamlit run app.py
 
 ## Results
 
-Both approaches successfully performed lung segmentation on chest CT images. The Transfer Learning model showed more stable training behavior and generally produced more consistent segmentation masks than the U-Net model trained from scratch. The Streamlit application demonstrates how both models can be deployed in an accessible interface for practical use.
+Both deep learning models successfully segmented lung regions from chest CT images.
+
+The implementation highlights the impact of Transfer Learning in biomedical image segmentation and demonstrates how trained models can be integrated into an interactive application for practical use.
 
 ---
 
