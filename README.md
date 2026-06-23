@@ -1,4 +1,4 @@
-# Lung CT Segmentation using Deep Learning
+# Interactive Deep Learning Application for Lung CT Segmentation
 
 This project explores the application of deep learning for automatic lung segmentation from chest CT images. Two different approaches were implemented and compared: a U-Net model developed from scratch and a Transfer Learning model using a pre-trained VGG16 encoder.
 
