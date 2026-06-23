@@ -11,7 +11,7 @@ Developed as the final project for the Digital Image Processing course at Pontif
 ## Application
 
 <p align="center">
-  <img src="images/appimage.jpeg" width="900">
+  <img src="images/appimage.png" width="900">
 </p>
 
 The application allows users to:
